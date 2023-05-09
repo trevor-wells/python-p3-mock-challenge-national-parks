@@ -24,12 +24,12 @@ class NationalPark:
     
     def visitors(self, new_visitor=None):
         from classes.visitor import Visitor
-        if isinstance(new_visitor, Visitor):
+        if isinstance(new_visitor, Visitor) and new_visitor not in self._visitors:
             self._visitors.append(new_visitor)
         return self._visitors
     
     def total_visits(self):
-        return len(self._visitors)
+        return len(self._trips)
     
     def best_visitor(self):
         from statistics import mode

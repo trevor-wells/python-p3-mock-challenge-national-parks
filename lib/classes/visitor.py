@@ -25,6 +25,6 @@ class Visitor:
     
     def national_parks(self, new_national_park=None):
         from classes.national_park import NationalPark
-        if isinstance(new_national_park, NationalPark):
+        if isinstance(new_national_park, NationalPark) and new_national_park not in self._national_parks:
             self._national_parks.append(new_national_park)
         return self._national_parks
