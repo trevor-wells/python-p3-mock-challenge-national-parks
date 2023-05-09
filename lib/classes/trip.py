@@ -8,6 +8,8 @@ class Trip:
         self.end_date = end_date
         national_park.trips(self)
         national_park.visitors(visitor)
+        visitor.trips(self)
+        visitor.national_parks(national_park)
  
     @property
     def visitor(self):

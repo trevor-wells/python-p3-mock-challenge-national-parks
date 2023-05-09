@@ -29,7 +29,8 @@ class NationalPark:
         return self._visitors
     
     def total_visits(self):
-        pass
+        return len(self._visitors)
     
     def best_visitor(self):
-        pass 
+        from statistics import mode
+        return mode(self._visitors)
